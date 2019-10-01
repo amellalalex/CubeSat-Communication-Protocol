@@ -2,9 +2,10 @@
 In this primitive example, a master pseudo-terminal device is created and sends a single message to its respective slave device.
 
 ## Objective
-    * Creation of master/save pseudoterminal port pairs.
-    * Usage and communication between them.
-    * Error and exception handling of the functions relevant to the aforementioned tasks.
+The objective of this example is to demonstrate:
+* Creation of master/save pseudoterminal port pairs.
+* Usage and communication between them.
+* Error and exception handling of the functions relevant to the aforementioned tasks.
 
 ## Usage
 ### ./a.out master :
@@ -13,3 +14,10 @@ In this primitive example, a master pseudo-terminal device is created and sends 
     
 ### ./a.out slave <slave serial port>
 * Creates the slave pseudoterminal port.
+
+## Compiling
+Using the terminal, run:
+```
+make
+```
+The code should compile without any errors. Keep in mind it was written for a linux machine (and uses several linux-only headers), but I am curious to know of any errors or improvements that could be made!
