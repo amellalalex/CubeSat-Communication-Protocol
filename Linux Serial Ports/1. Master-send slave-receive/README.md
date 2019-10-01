@@ -1,0 +1,15 @@
+# Example 1: Master-send, slave-receive
+In this primitive example, a master pseudo-terminal device is created and sends a single message to its respective slave device.
+
+## Objective
+    * Creation of master/save pseudoterminal port pairs.
+    * Usage and communication between them.
+    * Error and exception handling of the functions relevant to the aforementioned tasks.
+
+## Usage
+### ./a.out master :
+* Creates the master pseudoterminal port.
+* Returns the designated slave serial port.
+    
+### ./a.out slave <slave serial port>
+* Creates the slave pseudoterminal port.
