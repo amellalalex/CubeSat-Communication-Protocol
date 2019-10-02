@@ -34,14 +34,10 @@ int main(int argc, char *argv[])
   // Master or slave?
   if(strcmp(argv[1], "master") == 0) // master
   {
-    // Create placeholders
-    int master = -1;
-
     // Create master device
-    master = master_create();
-
-    if(master == -1) // master_create() failed
+    if(master_create() == -1)
     {
+      // master_create() failed
       printf("[!] Failed to create master pseudoterminal device. EXITING\n");
       exit(1);
     }
@@ -54,14 +50,10 @@ int main(int argc, char *argv[])
     char buffer[1024];
     fgets(buffer, 1024, stdin);
 
-    // Create placeholder
-    int sent = -1;
-
     // Send message to slave
-    sent = master_send(strlen(buffer), buffer);
-
-    if(sent == -1) // master_send() failed
+    if(master_send(strlen(buffer), buffer) == -1)
     {
+      // master_send() failed
       printf("[!] Failed to send message to slave. EXITING\n");
       exit(1);
     }
@@ -82,14 +74,10 @@ int main(int argc, char *argv[])
       exit(1);
     }
 
-    // Create placeholders
-    int slave = -1;
-
     // Create slave device
-    slave = slave_create(argv[2]);
-
-    if(slave == -1) // slave_create() failed
+    if(slave_create(argv[2]) == -1)
     {
+      // slave_create() failed
       printf("[!] Failed to create slave pseudoterminal device at endpoint %s. EXITING\n", argv[2]);
       exit(1);
     }
@@ -99,15 +87,13 @@ int main(int argc, char *argv[])
     char a[2];
     fgets(a, 2, stdin);
 
-    // Create placeholders
-    int received = -1;
+    // Create msg placeholder
     char msg[1024];
 
     // Read message from master device
-    received = slave_read(1024, msg);
-
-    if(received == -1) // slave_read() failed
+    if(slave_read(1024, msg) == -1)
     {
+      // slave_read() failed
       printf("[!] Failed to read message from master. EXITING\n");
       exit(1);
     }
