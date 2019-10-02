@@ -8,10 +8,9 @@
 
 #include "SerialPorts.h"
 
-// Global variables
-int slave_status  = 0; // 0 = off, 1 = on.
-int slave_port = -1;
-
+// File-static variables
+static int status = 0; // 0 = off, 1 = on.
+static int port   = -1;
 
 // Creates the slave pseudoterminal device.
 int slave_create(char *device)
@@ -24,9 +23,9 @@ int slave_create(char *device)
   }
 
   // Open slave pseudoterminal port
-  slave_port = open(device, O_RDWR);
+  port = open(device, O_RDWR);
 
-  if(slave_port == -1) // open() failed
+  if(port == -1) // open() failed
   {
     printf("[!] Failed to open slave port at %s.\n", device);
     return -1;
@@ -34,7 +33,7 @@ int slave_create(char *device)
 
   // successfully created slave device
   printf("[*] Slave pseudoterminal device created.\n");
-  slave_status = 1; // on
+  status = 1; // on
   return 0;
 }
 
@@ -42,7 +41,7 @@ int slave_create(char *device)
 int slave_read(int maxc, char *msgout)
 {
   // Check slave device status
-  if(slave_status == 0) // slave is off
+  if(status == 0) // slave is off
   {
     printf("[(!)] Cannot send a message to the master if the slave device is off.\n");
     return 0;
@@ -52,7 +51,7 @@ int slave_read(int maxc, char *msgout)
   int bytes_read = -1;
 
   // Read message from master
-  bytes_read = read(slave_port, msgout, maxc);
+  bytes_read = read(port, msgout, maxc);
 
   if(bytes_read < 0) // read() failed
   {
