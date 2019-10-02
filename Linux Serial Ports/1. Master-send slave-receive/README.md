@@ -9,12 +9,12 @@ The objective of this example is to demonstrate:
 
 ## Usage
 ### Creating the master device
-`./a.out master` :
+`./LinuxSerialPorts1 master` :
 * Creates the master pseudoterminal port.
 * Returns the designated slave serial port.
-    
+
 ### Creating the corresponding slave device
-`./a.out slave <slave serial port>`
+`./LinuxSerialPorts1 slave <slave serial port>`
 * Creates the slave pseudoterminal port.
 
 ## Compiling
