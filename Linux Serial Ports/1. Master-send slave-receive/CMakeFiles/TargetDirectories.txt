@@ -1,4 +1,0 @@
-/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles/rebuild_cache.dir
-/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles/edit_cache.dir
-/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles/serial_ext.dir
-/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles/LibserialCXX.dir

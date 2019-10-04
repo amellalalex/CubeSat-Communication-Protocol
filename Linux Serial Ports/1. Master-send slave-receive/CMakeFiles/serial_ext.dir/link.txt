@@ -1,2 +1,0 @@
-/usr/bin/ar qc libserial_ext.a  CMakeFiles/serial_ext.dir/libserial_ext.cpp.o
-/usr/bin/ranlib libserial_ext.a
