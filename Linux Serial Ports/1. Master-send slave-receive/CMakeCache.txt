@@ -139,7 +139,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=LinuxSerialPorts1
+CMAKE_PROJECT_NAME:STATIC=LibserialCXX
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -201,10 +201,10 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-LinuxSerialPorts1_BINARY_DIR:STATIC=/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive
+LibserialCXX_BINARY_DIR:STATIC=/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive
 
 //Value Computed by CMake
-LinuxSerialPorts1_SOURCE_DIR:STATIC=/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/src
+LibserialCXX_SOURCE_DIR:STATIC=/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/src
 
 
 ########################

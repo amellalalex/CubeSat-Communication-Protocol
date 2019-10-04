@@ -53,12 +53,14 @@ CMAKE_BINARY_DIR = "/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/pseudo-terminal.dir/all
+all: CMakeFiles/serial_ext.dir/all
+all: CMakeFiles/LibserialCXX.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/pseudo-terminal.dir/clean
+clean: CMakeFiles/serial_ext.dir/clean
+clean: CMakeFiles/LibserialCXX.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +70,58 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/pseudo-terminal.dir
+# Target rules for target CMakeFiles/serial_ext.dir
 
 # All Build rule for target.
-CMakeFiles/pseudo-terminal.dir/all:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/depend
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" --progress-num=1,2,3,4 "Built target pseudo-terminal"
-.PHONY : CMakeFiles/pseudo-terminal.dir/all
+CMakeFiles/serial_ext.dir/all:
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/depend
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" --progress-num=3,4 "Built target serial_ext"
+.PHONY : CMakeFiles/serial_ext.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pseudo-terminal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pseudo-terminal.dir/all
+CMakeFiles/serial_ext.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/serial_ext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" 0
-.PHONY : CMakeFiles/pseudo-terminal.dir/rule
+.PHONY : CMakeFiles/serial_ext.dir/rule
 
 # Convenience name for target.
-pseudo-terminal: CMakeFiles/pseudo-terminal.dir/rule
+serial_ext: CMakeFiles/serial_ext.dir/rule
 
-.PHONY : pseudo-terminal
+.PHONY : serial_ext
 
 # clean rule for target.
-CMakeFiles/pseudo-terminal.dir/clean:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/clean
-.PHONY : CMakeFiles/pseudo-terminal.dir/clean
+CMakeFiles/serial_ext.dir/clean:
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/clean
+.PHONY : CMakeFiles/serial_ext.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/LibserialCXX.dir
+
+# All Build rule for target.
+CMakeFiles/LibserialCXX.dir/all: CMakeFiles/serial_ext.dir/all
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/depend
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" --progress-num=1,2 "Built target LibserialCXX"
+.PHONY : CMakeFiles/LibserialCXX.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/LibserialCXX.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LibserialCXX.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles" 0
+.PHONY : CMakeFiles/LibserialCXX.dir/rule
+
+# Convenience name for target.
+LibserialCXX: CMakeFiles/LibserialCXX.dir/rule
+
+.PHONY : LibserialCXX
+
+# clean rule for target.
+CMakeFiles/LibserialCXX.dir/clean:
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/clean
+.PHONY : CMakeFiles/LibserialCXX.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

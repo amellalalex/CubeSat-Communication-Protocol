@@ -111,98 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pseudo-terminal
+# Target rules for targets named serial_ext
 
 # Build rule for target.
-pseudo-terminal: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pseudo-terminal
-.PHONY : pseudo-terminal
+serial_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serial_ext
+.PHONY : serial_ext
 
 # fast build rule for target.
-pseudo-terminal/fast:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/build
-.PHONY : pseudo-terminal/fast
+serial_ext/fast:
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/build
+.PHONY : serial_ext/fast
 
-main.o: main.c.o
+#=============================================================================
+# Target rules for targets named LibserialCXX
+
+# Build rule for target.
+LibserialCXX: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LibserialCXX
+.PHONY : LibserialCXX
+
+# fast build rule for target.
+LibserialCXX/fast:
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/build
+.PHONY : LibserialCXX/fast
+
+libserial_ext.o: libserial_ext.cpp.o
+
+.PHONY : libserial_ext.o
+
+# target to build an object file
+libserial_ext.cpp.o:
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/libserial_ext.cpp.o
+.PHONY : libserial_ext.cpp.o
+
+libserial_ext.i: libserial_ext.cpp.i
+
+.PHONY : libserial_ext.i
+
+# target to preprocess a source file
+libserial_ext.cpp.i:
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/libserial_ext.cpp.i
+.PHONY : libserial_ext.cpp.i
+
+libserial_ext.s: libserial_ext.cpp.s
+
+.PHONY : libserial_ext.s
+
+# target to generate assembly for a file
+libserial_ext.cpp.s:
+	$(MAKE) -f CMakeFiles/serial_ext.dir/build.make CMakeFiles/serial_ext.dir/libserial_ext.cpp.s
+.PHONY : libserial_ext.cpp.s
+
+main.o: main.cpp.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/main.c.o
-.PHONY : main.c.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-main.i: main.c.i
+main.i: main.cpp.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/main.c.i
-.PHONY : main.c.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-main.s: main.c.s
+main.s: main.cpp.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/main.c.s
-.PHONY : main.c.s
-
-master.o: master.c.o
-
-.PHONY : master.o
-
-# target to build an object file
-master.c.o:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/master.c.o
-.PHONY : master.c.o
-
-master.i: master.c.i
-
-.PHONY : master.i
-
-# target to preprocess a source file
-master.c.i:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/master.c.i
-.PHONY : master.c.i
-
-master.s: master.c.s
-
-.PHONY : master.s
-
-# target to generate assembly for a file
-master.c.s:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/master.c.s
-.PHONY : master.c.s
-
-slave.o: slave.c.o
-
-.PHONY : slave.o
-
-# target to build an object file
-slave.c.o:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/slave.c.o
-.PHONY : slave.c.o
-
-slave.i: slave.c.i
-
-.PHONY : slave.i
-
-# target to preprocess a source file
-slave.c.i:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/slave.c.i
-.PHONY : slave.c.i
-
-slave.s: slave.c.s
-
-.PHONY : slave.s
-
-# target to generate assembly for a file
-slave.c.s:
-	$(MAKE) -f CMakeFiles/pseudo-terminal.dir/build.make CMakeFiles/pseudo-terminal.dir/slave.c.s
-.PHONY : slave.c.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/LibserialCXX.dir/build.make CMakeFiles/LibserialCXX.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -211,17 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... pseudo-terminal"
 	@echo "... edit_cache"
+	@echo "... serial_ext"
+	@echo "... LibserialCXX"
+	@echo "... libserial_ext.o"
+	@echo "... libserial_ext.i"
+	@echo "... libserial_ext.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... master.o"
-	@echo "... master.i"
-	@echo "... master.s"
-	@echo "... slave.o"
-	@echo "... slave.i"
-	@echo "... slave.s"
 .PHONY : help
 
 

@@ -1,5 +1,10 @@
 # Example 1: Master-send, slave-receive
-In this primitive example, a master pseudo-terminal device is created and sends a single message to its respective slave device.
+In this primitive example, a master pseudo-terminal device is created and sends a single message to its respective slave device. The slave then answers to the master with another message.
+
+## LibSerial library
+This example was made thanks to the LibSerial C++ library which can be found here: https://github.com/crayzeewulf/libserial .
+
+Since LibSerial lacks any pseudo-terminal capabilities (specifically, the creation of a master pseudo-terminal device), I extended the LibSerial namespace to include a MasterPort class, which contains and operates very similarly to the SerialPort class provided by LibSerial.
 
 ## Objective
 The objective of this example is to demonstrate:
@@ -13,15 +18,14 @@ Using the terminal, run:
 make
 ```
 
-## Usage
-### Creating the master device
-`./pseudo-terminal master` :
-* Creates the master pseudoterminal port.
-* Returns the designated slave serial port.
+You'll need the LibSerial library installed in your /usr directory on linux. Refer to the link above to obtain the source code.
 
-### Creating the corresponding slave device
-`./pseudo-terminal slave <slave serial port>`
-* Creates the slave pseudoterminal port.
+## Usage
+`./LibserialCXX` :
+* Creates the master/slave pseudo-terminal ports.
+* Master sends serial data to the slave.
+* Slave answers with more data.
+* The pseudo-terminal master/slave pair is closed.
 
 ## Prompts
 All prompts are fronted with specific specifiers, described as follows:

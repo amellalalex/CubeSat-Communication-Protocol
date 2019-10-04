@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/src/libserial_ext.cpp
+libserial_ext.hpp
+/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/src/libserial_ext.hpp
+stdlib.h
+-
+unistd.h
+-
+string
+-
+
+/home/alex/CubeSat-Communication-Protocol/Linux Serial Ports/1. Master-send slave-receive/src/libserial_ext.hpp
+exception
+-
+string
+-
+

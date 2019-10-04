@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/serial-port.dir/main.c.o CMakeFiles/serial-port.dir/master.c.o CMakeFiles/serial-port.dir/slave.c.o  -o serial-port 

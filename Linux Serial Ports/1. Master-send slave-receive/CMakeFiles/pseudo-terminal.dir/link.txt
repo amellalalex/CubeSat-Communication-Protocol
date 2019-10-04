@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/pseudo-terminal.dir/main.c.o CMakeFiles/pseudo-terminal.dir/master.c.o CMakeFiles/pseudo-terminal.dir/slave.c.o  -o pseudo-terminal 

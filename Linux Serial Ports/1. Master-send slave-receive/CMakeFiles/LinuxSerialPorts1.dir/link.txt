@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/LinuxSerialPorts1.dir/main.c.o CMakeFiles/LinuxSerialPorts1.dir/master.c.o CMakeFiles/LinuxSerialPorts1.dir/slave.c.o  -o LinuxSerialPorts1 
