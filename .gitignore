@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# CMake Cache Files
+/Linux Serial Ports/1. Master-send slave-receive/CMakeFiles/*
