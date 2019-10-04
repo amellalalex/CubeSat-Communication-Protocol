@@ -33,3 +33,7 @@
 
 # CMake Cache Files
 /Linux Serial Ports/1. Master-send slave-receive/CMakeFiles/*
+/Linux Serial Ports/1. Master-send slave-receive/CMakeCache.txt
+/Linux Serial Ports/1. Master-send slave-receive/LibserialCXX
+/Linux Serial Ports/1. Master-send slave-receive/Makefile
+/Linux Serial Ports/1. Master-send slave-receive/cmake_install.cmake
