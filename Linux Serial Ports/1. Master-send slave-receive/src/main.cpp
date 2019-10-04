@@ -1,5 +1,6 @@
+#include "../include/libserial_ext.hpp"
+
 #include <libserial/SerialPort.h>
-#include "libserial_ext.hpp"
 
 #include <iostream>
 #include <string>

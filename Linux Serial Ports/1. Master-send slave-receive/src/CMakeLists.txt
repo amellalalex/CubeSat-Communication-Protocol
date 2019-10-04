@@ -6,8 +6,12 @@ set ( src-files
   "main.cpp"
 )
 
+set ( include-dir
+  "../include"
+)
+
 add_library ( "serial_ext"
-  "libserial_ext.hpp"
+  "${include-dir}/libserial_ext.hpp"
   "libserial_ext.cpp"
 )
 

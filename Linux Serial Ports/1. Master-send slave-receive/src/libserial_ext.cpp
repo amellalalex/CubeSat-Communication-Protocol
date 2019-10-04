@@ -1,4 +1,4 @@
-#include "libserial_ext.hpp"
+#include "../include/libserial_ext.hpp"
 
 #include <stdlib.h>
 #include <unistd.h>
