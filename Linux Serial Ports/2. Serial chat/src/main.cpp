@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
   {
     // Check argc
     if(argc < 2)
-    throw *(new InvalidNArgs);
+      throw *(new InvalidNArgs);
 
     //--- Create or join ---//
     //Create 'lobby'
