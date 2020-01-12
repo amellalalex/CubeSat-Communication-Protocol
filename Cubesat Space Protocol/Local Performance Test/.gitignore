@@ -1,0 +1,5 @@
+CMakeCache.txt
+Makefile
+*.cmake
+CMakeFiles
+CSP_LocalPerformanceTest
