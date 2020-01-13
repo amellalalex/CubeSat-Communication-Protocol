@@ -1,0 +1,15 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+PROJECT("CSP_fifo_routing")
+
+INCLUDE_DIRECTORIES(
+  "${PROJECT_SOURCE_DIR}/../include"
+)
+
+SET ( src
+  "main.c"
+)
+
+ADD_EXECUTABLE( ${PROJECT_NAME} ${src} )
+
+TARGET_LINK_LIBRARIES( ${PROJECT_NAME} "csp" "pthread" )
