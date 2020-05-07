@@ -66,11 +66,11 @@ static void * fifo_rx(void * parameters)
   while(read(rx_channel, &packet->length, BUF_SIZE) > 0)
   {
     // Inject received packet into CSP internal network
-    csp_new_packet(packet, &csp_if_fifo, NULL);
+    csp_qfifo_write(packet, &csp_if_fifo, NULL);
     packet = csp_buffer_get(BUF_SIZE);
   }
 
-  // done
+  // done 
   return NULL;
 }
 
